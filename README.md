@@ -9,6 +9,8 @@
 
 Unofficial client to work with Aminoapps, based on Amino.fix and HTTPX. Improved without losing compatibility with aminofix.
 
+**PUBLIC ARCHIVE**: Since I left Amino, library is no longer maintained. It still should work, but you need workaround to make NDC-MESSAGE-SIGNATURE. Thanks y'all for this journey. Maybe one day...
+
 ## Important notices
 
 - in subclient you should pass `client`, **not** `profile`
