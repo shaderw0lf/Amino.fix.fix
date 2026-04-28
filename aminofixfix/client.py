@@ -428,7 +428,7 @@ class Client(Callbacks, SocketHandler):
         )
 
         response = self.session.post(
-            f"/g/s/auth/login", headers=self.additional_headers(data=data), data=data
+            "/g/s/auth/login", headers=self.additional_headers(data=data), data=data
         )
         if response.status_code != 200:
             exceptions.CheckException(response)
@@ -477,7 +477,7 @@ class Client(Callbacks, SocketHandler):
         )
 
         response = self.session.post(
-            f"/g/s/auth/login", headers=self.additional_headers(data=data), data=data
+            "/g/s/auth/login", headers=self.additional_headers(data=data), data=data
         )
         self.run_amino_socket()
         if response.status_code != 200:
@@ -526,7 +526,7 @@ class Client(Callbacks, SocketHandler):
         )
 
         response = self.session.post(
-            f"/g/s/auth/login", headers=self.additional_headers(data=data), data=data
+            "/g/s/auth/login", headers=self.additional_headers(data=data), data=data
         )
         self.run_amino_socket()
         if response.status_code != 200:
@@ -575,7 +575,7 @@ class Client(Callbacks, SocketHandler):
             - **Fail** : :meth:`Exceptions <aminofixfix.lib.exceptions>`
         """
 
-        if deviceId == None:
+        if deviceId is None:
             deviceId = self.device_id
 
         data = dumps(
@@ -601,7 +601,7 @@ class Client(Callbacks, SocketHandler):
         )
 
         response = self.session.post(
-            f"/g/s/auth/register",
+            "/g/s/auth/register",
             data=data,
             headers=self.additional_headers(data=data),
             timeout=timeout,
@@ -634,7 +634,7 @@ class Client(Callbacks, SocketHandler):
         )
 
         response = self.session.post(
-            f"/g/s/account/delete-request/cancel",
+            "/g/s/account/delete-request/cancel",
             headers=self.additional_headers(data=data),
             data=data,
         )
@@ -660,7 +660,7 @@ class Client(Callbacks, SocketHandler):
         )
 
         response = self.session.post(
-            f"/g/s/auth/logout", headers=self.additional_headers(data=data), data=data
+            "/g/s/auth/logout", headers=self.additional_headers(data=data), data=data
         )
         if response.status_code != 200:
             return exceptions.CheckException(response)
@@ -706,7 +706,7 @@ class Client(Callbacks, SocketHandler):
         data = dumps({"age": age, "gender": gender, "timestamp": inttime()})
 
         response = self.session.post(
-            f"/g/s/persona/profile/basic",
+            "/g/s/persona/profile/basic",
             data=data,
             headers=self.additional_headers(data=data),
         )
@@ -741,7 +741,7 @@ class Client(Callbacks, SocketHandler):
         )
 
         response = self.session.post(
-            f"/g/s/auth/check-security-validation",
+            "/g/s/auth/check-security-validation",
             headers=self.additional_headers(data=data),
             data=data,
         )
@@ -773,7 +773,7 @@ class Client(Callbacks, SocketHandler):
 
         data = dumps(data)
         response = self.session.post(
-            f"/g/s/auth/request-security-validation",
+            "/g/s/auth/request-security-validation",
             headers=self.additional_headers(data=data),
             data=data,
             timeout=timeout,
@@ -807,7 +807,7 @@ class Client(Callbacks, SocketHandler):
         )
 
         response = self.session.post(
-            f"/g/s/auth/activate-email",
+            "/g/s/auth/activate-email",
             headers=self.additional_headers(data=data),
             data=data,
         )
@@ -833,7 +833,7 @@ class Client(Callbacks, SocketHandler):
         data = dumps({"deviceID": self.device_id, "secret": f"0 {password}"})
 
         response = self.session.post(
-            f"/g/s/account/delete-request",
+            "/g/s/account/delete-request",
             headers=self.additional_headers(data=data),
             data=data,
         )
@@ -888,7 +888,7 @@ class Client(Callbacks, SocketHandler):
         )
 
         response = self.session.post(
-            f"/g/s/auth/change-password",
+            "/g/s/auth/change-password",
             headers=self.additional_headers(data=data),
             data=data,
         )
@@ -952,7 +952,7 @@ class Client(Callbacks, SocketHandler):
         )
 
         response = self.session.post(
-            f"/g/s/auth/update-email",
+            "/g/s/auth/update-email",
             headers=self.additional_headers(data=data),
             data=data,
         )
@@ -987,7 +987,7 @@ class Client(Callbacks, SocketHandler):
         )
 
         response = self.session.post(
-            f"/g/s/device", headers=self.additional_headers(data=data), data=data
+            "/g/s/device", headers=self.additional_headers(data=data), data=data
         )
         if response.status_code != 200:
             return exceptions.CheckException(response)
@@ -1003,7 +1003,7 @@ class Client(Callbacks, SocketHandler):
         - object `UserProfile`
         - on exception, some exception from `aminofixfix.lib.exceptions`
         """
-        response = self.session.get(f"/g/s/account", headers=self.additional_headers())
+        response = self.session.get("/g/s/account", headers=self.additional_headers())
         if response.status_code != 200:
             return exceptions.CheckException(response)
         else:
@@ -1033,7 +1033,7 @@ class Client(Callbacks, SocketHandler):
         data = file.read()
 
         response = self.session.post(
-            f"/g/s/media/upload",
+            "/g/s/media/upload",
             data=data,
             headers=self.additional_headers(content_type=t, data=data),
         )
@@ -1047,7 +1047,7 @@ class Client(Callbacks, SocketHandler):
 
     def get_eventlog(self):
         response = self.session.get(
-            f"/g/s/eventlog/profile?language=en", headers=self.additional_headers()
+            "/g/s/eventlog/profile?language=en", headers=self.additional_headers()
         )
         if response.status_code != 200:
             return exceptions.CheckException(response)
@@ -1303,7 +1303,7 @@ class Client(Callbacks, SocketHandler):
         data = dumps(data)
 
         response = self.session.post(
-            f"/g/s/chat/thread", data=data, headers=self.additional_headers(data=data)
+            "/g/s/chat/thread", data=data, headers=self.additional_headers(data=data)
         )
         if response.status_code != 200:
             return exceptions.CheckException(response)
@@ -2307,7 +2307,7 @@ class Client(Callbacks, SocketHandler):
         if objectId is not None:
             data["objectId"] = objectId
             data["objectType"] = 2
-            url = f"/g/s/tipping"
+            url = "/g/s/tipping"
 
         if url is None:
             raise exceptions.SpecifyType()
@@ -2629,7 +2629,7 @@ class Client(Callbacks, SocketHandler):
 
         data = dumps(data)
         response = self.session.post(
-            f"/g/s/account/visit-settings",
+            "/g/s/account/visit-settings",
             headers=self.additional_headers(data=data),
             data=data,
         )
@@ -2652,7 +2652,7 @@ class Client(Callbacks, SocketHandler):
         """
         data = dumps({"aminoId": aminoId, "timestamp": inttime()})
         response = self.session.post(
-            f"/g/s/account/change-amino-id",
+            "/g/s/account/change-amino-id",
             headers=self.additional_headers(data=data),
             data=data,
         )
@@ -2916,7 +2916,7 @@ class Client(Callbacks, SocketHandler):
                 data = dumps(data)
 
                 response = self.session.post(
-                    f"/g/s/feed/g-vote",
+                    "/g/s/feed/g-vote",
                     headers=self.additional_headers(data=data),
                     data=data,
                 )
@@ -3083,7 +3083,7 @@ class Client(Callbacks, SocketHandler):
             - **Fail** : :meth:`Exceptions <aminofixfix.lib.exceptions>`
         """
         response = self.session.get(
-            f"/g/s/membership?force=true", headers=self.additional_headers()
+            "/g/s/membership?force=true", headers=self.additional_headers()
         )
         if response.status_code != 200:
             return exceptions.CheckException(response)
@@ -3130,7 +3130,7 @@ class Client(Callbacks, SocketHandler):
 
             - **Fail** : :meth:`Exceptions <aminofixfix.lib.exceptions>`
         """
-        response = self.session.get(f"/g/s/wallet", headers=self.additional_headers())
+        response = self.session.get("/g/s/wallet", headers=self.additional_headers())
         if response.status_code != 200:
             return exceptions.CheckException(response)
         else:
@@ -3230,7 +3230,7 @@ class Client(Callbacks, SocketHandler):
             )
         else:
             response = self.session.post(
-                f"/g/s/link-resolution",
+                "/g/s/link-resolution",
                 headers=self.additional_headers(data=data),
                 data=data,
             )
@@ -3252,7 +3252,7 @@ class Client(Callbacks, SocketHandler):
             - **Fail** : :meth:`Exceptions <aminofixfix.lib.exceptions>`
         """
         response = self.session.get(
-            f"/g/s/community-collection/supported-languages?start=0&size=100",
+            "/g/s/community-collection/supported-languages?start=0&size=100",
             headers=self.additional_headers(),
         )
         if response.status_code != 200:
@@ -3273,7 +3273,7 @@ class Client(Callbacks, SocketHandler):
             - **Fail** : :meth:`Exceptions <aminofixfix.lib.exceptions>`
         """
         response = self.session.post(
-            f"/g/s/coupon/new-user-coupon/claim", headers=self.additional_headers()
+            "/g/s/coupon/new-user-coupon/claim", headers=self.additional_headers()
         )
         if response.status_code != 200:
             return exceptions.CheckException(response)
@@ -3426,7 +3426,7 @@ class Client(Callbacks, SocketHandler):
         data = dumps({"adsLevel": level, "timestamp": inttime()})
 
         response = self.session.post(
-            f"/g/s/wallet/ads/config",
+            "/g/s/wallet/ads/config",
             headers=self.additional_headers(data=data),
             data=data,
         )
@@ -3462,7 +3462,7 @@ class Client(Callbacks, SocketHandler):
         )
 
         response = self.session.post(
-            f"/g/s/store/purchase",
+            "/g/s/store/purchase",
             headers=self.additional_headers(data=data),
             data=data,
         )
@@ -3510,7 +3510,7 @@ class Client(Callbacks, SocketHandler):
             {"objectId": objectId, "objectType": objectType, "timestamp": inttime()}
         )
         response = self.session.post(
-            f"/g/s/link-translation",
+            "/g/s/link-translation",
             data=data,
             headers=self.additional_headers(data=data),
         )

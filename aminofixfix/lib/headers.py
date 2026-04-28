@@ -36,7 +36,7 @@ def additionals(
         pass  # letting HTTPX do its job
     elif content_type:
         headers["Content-Type"] = content_type
-    elif data != None:
+    elif data is not None:
         headers["Content-Type"] = "application/json; charset=utf-8"
     else:
         headers["Content-Type"] = "application/octet-stream"

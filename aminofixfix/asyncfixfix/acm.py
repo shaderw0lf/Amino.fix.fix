@@ -60,7 +60,7 @@ class ACM(client.Client):
         )
 
         response = await self.session.post(
-            f"/g/s/community", headers=self.additional_headers(data=data), data=data
+            "/g/s/community", headers=self.additional_headers(data=data), data=data
         )
         if response.status_code != 200:
             return exceptions.CheckException(response)
