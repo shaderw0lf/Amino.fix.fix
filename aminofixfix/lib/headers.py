@@ -2,9 +2,8 @@ from .helpers import signature, str_uuid4
 
 BASIC_HEADERS = {
     "Accept": "*/*",
-    "Accept-Encoding": "gzip, deflate, br",
+    "Accept-Encoding": "gzip, deflate",
     "Accept-Language": "en-US,en;q=0.9",
-    "Host": "service.aminoapps.com",
     "Connection": "keep-alive",
     "NDCLANG": "en",
 }
