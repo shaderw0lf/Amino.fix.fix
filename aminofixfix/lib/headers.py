@@ -83,7 +83,7 @@ class Tapjoy:
                 "bundle_id": "com.narvii.amino.master",
                 "current_orientation": "portrait",
                 "release_version": "3.4.33585",
-                "user_agent": "Dalvik\/2.1.0 (Linux; U; Android 10; G8231 Build\/41.2.A.0.219; com.narvii.amino.master\/3.4.33567)",
+                "user_agent": r"Dalvik/2.1.0 (Linux; U; Android 10; G8231 Build/41.2.A.0.219; com.narvii.amino.master/3.4.33567)",
             },
             "device_user": {
                 "country": "US",
@@ -105,7 +105,7 @@ class Tapjoy:
                 "idfa": "0c26b7c3-4801-4815-a155-50e0e6c27eeb",
                 "ip_address": "",
                 "locale": "ru",
-                "timezone": {"location": "Asia\/Seoul", "offset": "GMT+02:00"},
+                "timezone": {"location": r"Asia/Seoul", "offset": "GMT+02:00"},
                 "volume_enabled": True,
             },
             "session_id": "7fe1956a-6184-4b59-8682-04ff31e24bc0",

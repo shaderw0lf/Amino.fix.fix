@@ -29,11 +29,6 @@ class ACM(Client):
             - you can pass only one thing
             - comId will be taken first
 
-
-
-        \- imperialwool, where is another fields of subclient??? ;-;
-
-        \- its in main client lol why you need to pass them again
         """
         Client.__init__(
             self,

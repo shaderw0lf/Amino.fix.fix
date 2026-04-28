@@ -30,7 +30,7 @@ class SyncHttpxClient:
         self.__http2_enabled = http2_enabled
         self.__client: HTTPXSYNCCLIENT = HTTPXSYNCCLIENT(
             base_url=self.__base_url,
-            proxies=self.__proxies,
+            proxy=self.__proxies,
             timeout=self.__timeout,
             headers=self.__main_headers,
             http2=self.__http2_enabled,

