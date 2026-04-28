@@ -1942,7 +1942,6 @@ class Client(Callbacks, SocketHandler):
             data["mediaUploadValue"] = bytes_to_b64(file.read())
 
         data = dumps(data)
-        print(data)
 
         response = self.session.post(
             f"/g/s/chat/thread/{chatId}/message",

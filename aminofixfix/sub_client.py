@@ -1762,7 +1762,6 @@ class SubClient(Client):
             data["mediaUploadValue"] = bytes_to_b64(file.read())
 
         data = dumps(data)
-        print(data)
 
         response = self.session.post(
             f"/x{self.comId}/s/chat/thread/{chatId}/message",
