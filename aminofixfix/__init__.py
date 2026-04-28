@@ -1,4 +1,4 @@
-__version__ = "1.2.0"
+__version__ = "1.2.1"
 
 from .acm import ACM
 from .client import Client
@@ -19,7 +19,6 @@ def work():
         data = loads(response.read())
 
         __newest__ = data["info"]["version"]
-
         if version(__newest__) > version(__version__):
             print(
                 "\n! New version of amino.fix.fix is available !",
@@ -32,9 +31,9 @@ def work():
                 "| Latest stable available: {} |\n".format(__newest__),
                 sep="\n",
             )
-    except:
+    except Exception:
         print(
-            "\nCan't check if amino.fix.fix needs update. Please, check internet connection or firewall.\n"
+            # "\nCan't check if amino.fix.fix needs update. Please, check internet connection or firewall.\n"
         )
 
 
