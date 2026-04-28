@@ -91,12 +91,14 @@ class SubClient(Client):
         if get_profile:
             try:
                 self.profile: objects.UserProfile = self.get_user_info(
-                    userId=self.profile.userId
+                    userId=self.userId
                 )
             except AttributeError:
                 raise exceptions.FailedLogin()
             except exceptions.UserUnavailable:
                 pass
+        else:
+            self.profile = objects.UserProfile({"uid": self.userId}).UserProfile
 
     def additional_headers(
         self, data: str = None, content_type: str = None
