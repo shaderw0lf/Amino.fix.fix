@@ -7,6 +7,8 @@ from .socket import Callbacks, SocketHandler
 from .lib import exceptions, helpers, objects, headers
 
 from threading import Thread
+
+
 def work():
     try:
         from json import loads
@@ -22,22 +24,23 @@ def work():
             print(
                 "\n! New version of amino.fix.fix is available !",
                 "| Using: {} | Available: {} |\n".format(__version__, __newest__),
-                
-                sep="\n"
+                sep="\n",
             )
         elif version(__newest__) < version(__version__):
             print(
                 "\n! Using preview version {} of amino.fix.fix !".format(__version__),
                 "| Latest stable available: {} |\n".format(__newest__),
-                
-                sep="\n"
+                sep="\n",
             )
     except:
-        print("\nCan't check if amino.fix.fix needs update. Please, check internet connection or firewall.\n")
+        print(
+            "\nCan't check if amino.fix.fix needs update. Please, check internet connection or firewall.\n"
+        )
+
 
 Thread(target=work).start()
 
-'''
+"""
 - gen-files:
       scripts:
       - docs/scripts/gen_ref_pages.py
@@ -45,4 +48,4 @@ Thread(target=work).start()
   - literate-nav:
       nav_file: SUMMARY.md
   - section-index
-  '''
+  """

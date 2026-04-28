@@ -2,20 +2,17 @@
 
 [![Documentation Status](https://readthedocs.org/projects/aminofixfix/badge/?version=latest)](https://aminofixfix.readthedocs.io/en/latest/?badge=latest)
 [![PyPi Version](https://img.shields.io/pypi/v/amino.fix.fix.svg)](https://pypi.python.org/pypi/amino.fix.fix/)
-[![PyPi Preview](https://img.shields.io/badge/pypi_pre-v1.0.7b4-blue)](https://pypi.org/project/amino.fix.fix/#history)
-![Python Version](https://img.shields.io/badge/python-%3E%3D3.8-orange)
-[![Issues](https://img.shields.io/github/issues-raw/imperialwool/amino.fix.fix.svg?maxAge=25000)](https://github.com/imperialwool/Amino.fix.fix/issues)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/imperialwool/amino.fix.fix.svg?style=flat)](https://github.com/imperialwool/Amino.fix.fix/pulls)
+![Python Version](https://img.shields.io/badge/python-%3E%3D3.9-orange)
+[![Issues](https://img.shields.io/github/issues-raw/shaderw0lf/amino.fix.fix.svg?maxAge=25000)](https://github.com/shaderw0lf/Amino.fix.fix/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/shaderw0lf/amino.fix.fix.svg?style=flat)](https://github.com/shaderw0lf/Amino.fix.fix/pulls)
 
 Unofficial client to work with Aminoapps, based on Amino.fix and HTTPX. Improved without losing compatibility with aminofix.
-
-**PUBLIC ARCHIVE**: Since I left Amino, library is no longer maintained. It still should work, but you need workaround to make NDC-MESSAGE-SIGNATURE. Thanks y'all for this journey. Maybe one day...
 
 ## Important notices
 
 - in subclient you should pass `client`, **not** `profile`
 - `lib/util` -> `lib/`
-- if you have issues in pydroid, reinstall/update it
+- original Amino servers are closed, library updated to work with custom domains that may be compatible with library 
 
 ## How to install?
 

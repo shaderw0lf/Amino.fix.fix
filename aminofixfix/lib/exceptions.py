@@ -3,14 +3,17 @@ from __future__ import annotations
 
 from json import loads
 
+
 class UnsupportedService(Exception):
     """
     - **API Code** : 100
     - **API Message** : Unsupported service. Your client may be out of date. Please update it to the latest version.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class FileTooLarge(Exception):
     """
@@ -18,8 +21,10 @@ class FileTooLarge(Exception):
     - **API Message** : ``Unknown Message``
     - **API String** : API_STD_ERR_ENTITY_TOO_LARGE_RAW
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class InvalidRequest(Exception):
     """
@@ -27,8 +32,10 @@ class InvalidRequest(Exception):
     - **API Message** : Invalid Request. Please update to the latest version. If the problem continues, please contact us.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class InvalidSession(Exception):
     """
@@ -36,8 +43,10 @@ class InvalidSession(Exception):
     - **API Message** : ``Unknown Message``
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class AccessDenied(Exception):
     """
@@ -45,8 +54,10 @@ class AccessDenied(Exception):
     - **API Message** : Access denied.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class UnexistentData(Exception):
     """
@@ -54,8 +65,10 @@ class UnexistentData(Exception):
     - **API Message** : The requested data does not exist.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class ActionNotAllowed(Exception):
     """
@@ -63,8 +76,10 @@ class ActionNotAllowed(Exception):
     - **API Message** : Action not allowed.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class ServiceUnderMaintenance(Exception):
     """
@@ -72,8 +87,10 @@ class ServiceUnderMaintenance(Exception):
     - **API Message** : Sorry, this service is under maintenance. Please check back later.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class MessageNeeded(Exception):
     """
@@ -81,8 +98,10 @@ class MessageNeeded(Exception):
     - **API Message** : Be more specific, please.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class InvalidAccountOrPassword(Exception):
     """
@@ -90,8 +109,10 @@ class InvalidAccountOrPassword(Exception):
     - **API Message** : ``Unknown Message``
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class AccountDisabled(Exception):
     """
@@ -99,8 +120,10 @@ class AccountDisabled(Exception):
     - **API Message** : This account is disabled.
     - **API String** : AUTH_DISABLED_ACCOUNT
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class InvalidEmail(Exception):
     """
@@ -108,8 +131,10 @@ class InvalidEmail(Exception):
     - **API Message** : Invalid email address.
     - **API String** : API_ERR_EMAIL
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class InvalidPassword(Exception):
     """
@@ -117,8 +142,10 @@ class InvalidPassword(Exception):
     - **API Message** : Invalid password. Password must be 6 characters or more and contain no spaces.
     - **API String** : API_ERR_PASSWORD
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class EmailAlreadyTaken(Exception):
     """
@@ -126,8 +153,10 @@ class EmailAlreadyTaken(Exception):
     - **API Message** : Hey this email ``X`` has been registered already. You can try to log in with the email or edit the email.
     - **API String** : API_ERR_EMAIL_TAKEN
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class UnsupportedEmail(Exception):
     """
@@ -135,8 +164,10 @@ class UnsupportedEmail(Exception):
     - **API Message** : This email address is not supported.
     - **API String** : API_ERR_EMAIL_TAKEN
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class AccountDoesntExist(Exception):
     """
@@ -144,8 +175,10 @@ class AccountDoesntExist(Exception):
     - **API Message** : ``Unknown Message``
     - **API String** : AUTH_ACCOUNT_NOT_EXISTS
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class InvalidDevice(Exception):
     """
@@ -153,8 +186,10 @@ class InvalidDevice(Exception):
     - **API Message** : Error! Your device is currently not supported, or the app is out of date. Please update to the latest version.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class AccountLimitReached(Exception):
     """
@@ -162,8 +197,10 @@ class AccountLimitReached(Exception):
     - **API Message** : A maximum of 3 accounts can be created from this device. If you forget your password, please reset it.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class TooManyRequests(Exception):
     """
@@ -171,8 +208,10 @@ class TooManyRequests(Exception):
     - **API Message** : Too many requests. Try again later.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class CantFollowYourself(Exception):
     """
@@ -180,8 +219,10 @@ class CantFollowYourself(Exception):
     - **API Message** : ``Unknown Message``
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class UserUnavailable(Exception):
     """
@@ -189,8 +230,10 @@ class UserUnavailable(Exception):
     - **API Message** : This user is unavailable.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class YouAreBanned(Exception):
     """
@@ -198,8 +241,10 @@ class YouAreBanned(Exception):
     - **API Message** : You are banned.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class UserNotMemberOfCommunity(Exception):
     """
@@ -207,8 +252,10 @@ class UserNotMemberOfCommunity(Exception):
     - **API Message** : You have to join this Community first.
     - **API String** : API_ERR_USER_NOT_IN_COMMUNITY
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class RequestRejected(Exception):
     """
@@ -216,8 +263,10 @@ class RequestRejected(Exception):
     - **API Message** : Request rejected. You have been temporarily muted (read only mode) because you have received a strike. To learn more, please check the Help Center.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class ActivateAccount(Exception):
     """
@@ -225,8 +274,10 @@ class ActivateAccount(Exception):
     - **API Message** : Please activate your account first. Check your email, including your spam folder.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class CantLeaveCommunity(Exception):
     """
@@ -234,8 +285,10 @@ class CantLeaveCommunity(Exception):
     - **API Message** : Sorry, you can not do this before transferring your Agent status to another member.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class ReachedTitleLength(Exception):
     """
@@ -243,8 +296,10 @@ class ReachedTitleLength(Exception):
     - **API Message** : Sorry, the max length of member's title is limited to 20.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class AccountDeleted(Exception):
     """
@@ -252,8 +307,10 @@ class AccountDeleted(Exception):
     - **API Message** : ``Unknown Message``
     - **API String** : AUTH_RECOVERABLE_DELETED_ACCOUNT
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class API_ERR_EMAIL_NO_PASSWORD(Exception):
     """
@@ -261,8 +318,10 @@ class API_ERR_EMAIL_NO_PASSWORD(Exception):
     - **API Message** : ``Unknown Message``
     - **API String** : API_ERR_EMAIL_NO_PASSWORD
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class API_ERR_COMMUNITY_USER_CREATED_COMMUNITIES_VERIFY(Exception):
     """
@@ -270,8 +329,10 @@ class API_ERR_COMMUNITY_USER_CREATED_COMMUNITIES_VERIFY(Exception):
     - **API Message** : ``Unknown Message``
     - **API String** : API_ERR_COMMUNITY_USER_CREATED_COMMUNITIES_VERIFY
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class ReachedMaxTitles(Exception):
     """
@@ -279,8 +340,10 @@ class ReachedMaxTitles(Exception):
     - **API Message** : You can only add up to 20 Titles. Please choose the most relevant ones.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class VerificationRequired(Exception):
     """
@@ -288,8 +351,10 @@ class VerificationRequired(Exception):
     - **API Message** : Verification Required.
     - **API String** : API_ERR_NEED_TWO_FACTOR_AUTHENTICATION
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class API_ERR_INVALID_AUTH_NEW_DEVICE_LINK(Exception):
     """
@@ -297,8 +362,10 @@ class API_ERR_INVALID_AUTH_NEW_DEVICE_LINK(Exception):
     - **API Message** : ``Unknown Message``
     - **API String** : API_ERR_INVALID_AUTH_NEW_DEVICE_LINK
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class CommandCooldown(Exception):
     """
@@ -306,8 +373,10 @@ class CommandCooldown(Exception):
     - **API Message** : Whoa there! You've done too much too quickly. Take a break and try again later.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class UserBannedByTeamAmino(Exception):
     """
@@ -315,8 +384,10 @@ class UserBannedByTeamAmino(Exception):
     - **API Message** : Sorry, this user has been banned by Team Amino.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class BadImage(Exception):
     """
@@ -324,8 +395,10 @@ class BadImage(Exception):
     - **API Message** : ``Unknown Message``
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class InvalidThemepack(Exception):
     """
@@ -333,8 +406,10 @@ class InvalidThemepack(Exception):
     - **API Message** : ``Unknown Message``
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class InvalidVoiceNote(Exception):
     """
@@ -342,8 +417,10 @@ class InvalidVoiceNote(Exception):
     - **API Message** : ``Unknown Message``
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class RequestedNoLongerExists(Exception):
     """
@@ -351,8 +428,10 @@ class RequestedNoLongerExists(Exception):
     - **API Message** : Sorry, the requested data no longer exists. Try refreshing the view.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class PageRepostedTooRecently(Exception):
     """
@@ -360,8 +439,10 @@ class PageRepostedTooRecently(Exception):
     - **API Message** : Sorry, you have reported this page too recently.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class InsufficientLevel(Exception):
     """
@@ -369,8 +450,10 @@ class InsufficientLevel(Exception):
     - **API Message** : This post type is restricted to members with a level ``X`` ranking and above.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class WallCommentingDisabled(Exception):
     """
@@ -378,8 +461,10 @@ class WallCommentingDisabled(Exception):
     - **API Message** : This member has disabled commenting on their wall.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class CommunityNoLongerExists(Exception):
     """
@@ -387,8 +472,10 @@ class CommunityNoLongerExists(Exception):
     - **API Message** : This Community no longer exists.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class InvalidCodeOrLink(Exception):
     """
@@ -396,8 +483,10 @@ class InvalidCodeOrLink(Exception):
     - **API Message** : Sorry, this code or link is invalid.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class CommunityNameAlreadyTaken(Exception):
     """
@@ -405,8 +494,10 @@ class CommunityNameAlreadyTaken(Exception):
     - **API Message** : ``Unknown Message``
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class CommunityCreateLimitReached(Exception):
     """
@@ -414,8 +505,10 @@ class CommunityCreateLimitReached(Exception):
     - **API Message** : ``Unknown Message``
     - **API String** : API_ERR_COMMUNITY_USER_CREATED_COMMUNITIES_EXCEED_QUOTA
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class CommunityDisabled(Exception):
     """
@@ -423,8 +516,10 @@ class CommunityDisabled(Exception):
     - **API Message** : This Community is disabled.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class CommunityDeleted(Exception):
     """
@@ -432,8 +527,10 @@ class CommunityDeleted(Exception):
     - **API Message** : This Community has been deleted.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class DuplicatePollOption(Exception):
     """
@@ -441,8 +538,10 @@ class DuplicatePollOption(Exception):
     - **API Message** : Sorry, you have duplicate poll options.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class ReachedMaxPollOptions(Exception):
     """
@@ -450,8 +549,10 @@ class ReachedMaxPollOptions(Exception):
     - **API Message** : Sorry, you can only join or add up to 5 of your items per poll.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class TooManyChats(Exception):
     """
@@ -463,14 +564,17 @@ class TooManyChats(Exception):
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
 
+
 class ChatFull(Exception):
     """
     - **API Code** : 1605
     - **API Message** : ``Unknown Message``
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class TooManyInviteUsers(Exception):
     """
@@ -478,8 +582,10 @@ class TooManyInviteUsers(Exception):
     - **API Message** : Sorry, you can only invite up to 999 people.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class ChatInvitesDisabled(Exception):
     """
@@ -487,8 +593,10 @@ class ChatInvitesDisabled(Exception):
     - **API Message** : This user has disabled chat invite requests.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class RemovedFromChat(Exception):
     """
@@ -496,8 +604,10 @@ class RemovedFromChat(Exception):
     - **API Message** : You've been removed from this chatroom.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class UserNotJoined(Exception):
     """
@@ -505,8 +615,10 @@ class UserNotJoined(Exception):
     - **API Message** : Sorry, this user has not joined.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class API_ERR_CHAT_VVCHAT_NO_MORE_REPUTATIONS(Exception):
     """
@@ -514,8 +626,10 @@ class API_ERR_CHAT_VVCHAT_NO_MORE_REPUTATIONS(Exception):
     - **API Message** : ``Unknown Message``
     - **API String** : API_ERR_CHAT_VVCHAT_NO_MORE_REPUTATIONS
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class MemberKickedByOrganizer(Exception):
     """
@@ -523,8 +637,10 @@ class MemberKickedByOrganizer(Exception):
     - **API Message** : This member was previously kicked by the organizer and cannot be reinvited.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class LevelFiveRequiredToEnableProps(Exception):
     """
@@ -532,8 +648,10 @@ class LevelFiveRequiredToEnableProps(Exception):
     - **API Message** : ``Unknown Message``
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class ChatViewOnly(Exception):
     """
@@ -541,8 +659,10 @@ class ChatViewOnly(Exception):
     - **API Message** : ``Unknown Message``
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class ChatMessageTooBig(Exception):
     """
@@ -550,8 +670,10 @@ class ChatMessageTooBig(Exception):
     - **API Message** : ``Unknown Message``
     - **API String** : API_ERR_CHAT_MESSAGE_CONTENT_TOO_LONG
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class InviteCodeNotFound(Exception):
     """
@@ -559,8 +681,10 @@ class InviteCodeNotFound(Exception):
     - **API Message** : Sorry, the requested data no longer exists. Try refreshing the view.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class AlreadyRequestedJoinCommunity(Exception):
     """
@@ -568,8 +692,10 @@ class AlreadyRequestedJoinCommunity(Exception):
     - **API Message** : Sorry, you have already submitted a membership request.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class API_ERR_PUSH_SERVER_LIMITATION_APART(Exception):
     """
@@ -577,8 +703,10 @@ class API_ERR_PUSH_SERVER_LIMITATION_APART(Exception):
     - **API Message** : ``Unknown Message``
     - **API String** : API_ERR_PUSH_SERVER_LIMITATION_APART
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class API_ERR_PUSH_SERVER_LIMITATION_COUNT(Exception):
     """
@@ -586,8 +714,10 @@ class API_ERR_PUSH_SERVER_LIMITATION_COUNT(Exception):
     - **API Message** : ``Unknown Message``
     - **API String** : API_ERR_PUSH_SERVER_LIMITATION_COUNT
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class API_ERR_PUSH_SERVER_LINK_NOT_IN_COMMUNITY(Exception):
     """
@@ -595,8 +725,10 @@ class API_ERR_PUSH_SERVER_LINK_NOT_IN_COMMUNITY(Exception):
     - **API Message** : ``Unknown Message``
     - **API String** : API_ERR_PUSH_SERVER_LINK_NOT_IN_COMMUNITY
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class API_ERR_PUSH_SERVER_LIMITATION_TIME(Exception):
     """
@@ -604,8 +736,10 @@ class API_ERR_PUSH_SERVER_LIMITATION_TIME(Exception):
     - **API Message** : ``Unknown Message``
     - **API String** : API_ERR_PUSH_SERVER_LIMITATION_TIME
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class AlreadyCheckedIn(Exception):
     """
@@ -613,8 +747,10 @@ class AlreadyCheckedIn(Exception):
     - **API Message** : Sorry, you can't check in any more.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class AlreadyUsedMonthlyRepair(Exception):
     """
@@ -622,8 +758,10 @@ class AlreadyUsedMonthlyRepair(Exception):
     - **API Message** : ``Unknown Message``
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class AccountAlreadyRestored(Exception):
     """
@@ -631,8 +769,10 @@ class AccountAlreadyRestored(Exception):
     - **API Message** : Account already restored.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class IncorrectVerificationCode(Exception):
     """
@@ -640,8 +780,10 @@ class IncorrectVerificationCode(Exception):
     - **API Message** : Incorrect verification code.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class NotOwnerOfChatBubble(Exception):
     """
@@ -649,8 +791,10 @@ class NotOwnerOfChatBubble(Exception):
     - **API Message** : You are not the owner of this chat bubble.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class NotEnoughCoins(Exception):
     """
@@ -658,8 +802,10 @@ class NotEnoughCoins(Exception):
     - **API Message** : ``Unknown Message``
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class AlreadyPlayedLottery(Exception):
     """
@@ -667,8 +813,10 @@ class AlreadyPlayedLottery(Exception):
     - **API Message** : You have played the maximum number of lucky draws.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class CannotSendCoins(Exception):
     """
@@ -676,8 +824,10 @@ class CannotSendCoins(Exception):
     - **API Message** : ``Unknown Message``
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class AminoIDAlreadyChanged(Exception):
     """
@@ -685,8 +835,10 @@ class AminoIDAlreadyChanged(Exception):
     - **API Message** : Amino ID cannot be changed after you set it.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class InvalidAminoID(Exception):
     """
@@ -694,8 +846,10 @@ class InvalidAminoID(Exception):
     - **API Message** : Invalid Amino ID
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class InvalidName(Exception):
     """
@@ -703,118 +857,151 @@ class InvalidName(Exception):
     - **API Message** : Sorry, the name is invalid.
     - **API String** : ``Unknown String``
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class SpecifyType(Exception):
     """
     Raised when you need to specify the output of the command.
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class WrongType(Exception):
     """
     Raised when you attribute the function the wrong type.
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class UnknownResponse(Exception):
     """
     Raised when an error occurs but the reason is unknown.
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class NotLoggedIn(Exception):
     """
     Raised when you try to make an action but you aren't logged in.
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class NoCommunity(Exception):
     """
     Raised when you try to make an action but no community was selected.
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class CommunityNotFound(Exception):
     """
     Raised when you search for a community but nothing is found.
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class NoChatThread(Exception):
     """
     Raised when you try to make an action but no chat was selected.
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class ChatRequestsBlocked(Exception):
     """
     Raised when you try to make an action but the end user has chat requests blocked.
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class NoImageSource(Exception):
     """
     Raised when you try to make an action but no image source was selected.
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class CannotFetchImage(Exception):
     """
     Raised when an image cannot be fetched.
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class FailedLogin(Exception):
     """
     Raised when you try to login but it fails.
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class AgeTooLow(Exception):
     """
     Raised when you try to configure an account but the age is too low. Minimum is 13.
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class UnsupportedLanguage(Exception):
     """
     Raised when you try to use a language that isn't supported or exists.
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class CommunityNeeded(Exception):
     """
     Raised when you try to execute an command but a Community needs to be specified.
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class FlagTypeNeeded(Exception):
     """
     Raised when you try to flag a community, blog or user but a Flag Type needs to be specified.
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class ReasonNeeded(Exception):
     """
     Raised when you try to execute an command but a Reason needs to be specified.
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
 
@@ -823,15 +1010,19 @@ class TransferRequestNeeded(Exception):
     """
     Raised when you need to transfer host to complete the action.
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class LibraryUpdateAvailable(Exception):
     """
     Raised when a new library update is available.
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class UserHasBeenDeleted(Exception):
     """
@@ -843,6 +1034,7 @@ class UserHasBeenDeleted(Exception):
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
 
+
 class IpTemporaryBan(Exception):
     """
     - **API Code** : 403
@@ -852,6 +1044,7 @@ class IpTemporaryBan(Exception):
 
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class NotFound(Exception):
     """
@@ -863,6 +1056,7 @@ class NotFound(Exception):
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
 
+
 class InternalServerError(Exception):
     """
     - **API Code** : 500
@@ -872,6 +1066,7 @@ class InternalServerError(Exception):
 
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class ServersAreDying(Exception):
     """
@@ -883,6 +1078,7 @@ class ServersAreDying(Exception):
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
 
+
 class TooBigContent(Exception):
     """
     - **API Code** : 413
@@ -892,6 +1088,7 @@ class TooBigContent(Exception):
 
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class Teapot(Exception):
     """
@@ -903,6 +1100,7 @@ class Teapot(Exception):
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
 
+
 class Unauthorized(Exception):
     """
     - **API Code** : 401
@@ -912,6 +1110,7 @@ class Unauthorized(Exception):
 
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
+
 
 class FailedSubscribeFanClub(Exception):
     """
@@ -923,6 +1122,7 @@ class FailedSubscribeFanClub(Exception):
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
 
+
 class UnknownError(Exception):
     """
     - **API Code** : ???
@@ -931,19 +1131,21 @@ class UnknownError(Exception):
 
     Fallback for unknown errors, exceptions and etc.
     """
+
     def __init__(*args, **kwargs):
         Exception.__init__(*args, **kwargs)
 
+
 def CheckException(response):
-    '''
+    """
     Check exception for any request of client. It doesn't matter if it sync or async. It uses standart json library and getting text from response. Just make sure that `response.text` is not function.
 
     Pass response from request.
-    
+
     Nothing returns.
 
     Raises exception.
-    '''
+    """
     try:
         data = loads(response.text)
         api_code = data["api:statuscode"]
@@ -957,101 +1159,190 @@ def CheckException(response):
         http_error_code = True
 
     CheckCode(data, api_code, http_error_code)
-    return 
+    return
+
 
 def CheckCode(data: str | dict, api_code: int, http_error_code: bool = False):
-    '''
+    """
     Big chungus for destroying api codes and your code rising an metal gear exception
-    '''
+    """
     # http error codes that very common in amino
-    if http_error_code:    
-        if api_code == 401: raise Unauthorized(data)
-        elif api_code == 403: raise IpTemporaryBan(data)
-        elif api_code == 404: raise NotFound(data)
-        elif api_code == 413: raise TooBigContent(data)
-        elif api_code == 418: raise Teapot(data)
-        elif api_code == 429: raise TooManyRequests(data)
-        elif api_code == 500: raise InternalServerError(data)
-        elif api_code in [502, 503, 504]: raise ServersAreDying(data)
-        else: raise UnknownError(data)
+    if http_error_code:
+        if api_code == 401:
+            raise Unauthorized(data)
+        elif api_code == 403:
+            raise IpTemporaryBan(data)
+        elif api_code == 404:
+            raise NotFound(data)
+        elif api_code == 413:
+            raise TooBigContent(data)
+        elif api_code == 418:
+            raise Teapot(data)
+        elif api_code == 429:
+            raise TooManyRequests(data)
+        elif api_code == 500:
+            raise InternalServerError(data)
+        elif api_code in [502, 503, 504]:
+            raise ServersAreDying(data)
+        else:
+            raise UnknownError(data)
 
     # amino errors
-    if api_code == 100: raise UnsupportedService(data)
-    elif api_code == 102: raise FileTooLarge(data)
-    elif api_code in [103, 104]: raise InvalidRequest(data)
-    elif api_code == 105: raise InvalidSession(data)
-    elif api_code == 106: raise AccessDenied(data)
-    elif api_code == 107: raise UnexistentData(data)
-    elif api_code == 110: raise ActionNotAllowed(data)
-    elif api_code == 111: raise ServiceUnderMaintenance(data)
-    elif api_code == 113: raise MessageNeeded(data)
-    elif api_code == 200: raise InvalidAccountOrPassword(data)
-    elif api_code == 201: raise AccountDisabled(data)
-    elif api_code == 213: raise InvalidEmail(data)
-    elif api_code == 214: raise InvalidPassword(data)
-    elif api_code == 215: raise EmailAlreadyTaken(data) and UnsupportedEmail(data)
-    elif api_code == 216: raise AccountDoesntExist(data)
-    elif api_code == 218: raise InvalidDevice(data)
-    elif api_code == 219: raise AccountLimitReached(data) or TooManyRequests(data)
-    elif api_code == 221: raise CantFollowYourself(data)
-    elif api_code == 225: raise UserUnavailable(data)
-    elif api_code == 229: raise YouAreBanned(data)
-    elif api_code == 230: raise UserNotMemberOfCommunity(data)
-    elif api_code == 235: raise RequestRejected(data)
-    elif api_code == 238: raise ActivateAccount(data)
-    elif api_code == 239: raise CantLeaveCommunity(data)
-    elif api_code == 240: raise ReachedTitleLength(data)
-    elif api_code == 245: raise UserHasBeenDeleted(data)
-    elif api_code == 246: raise AccountDeleted(data)
-    elif api_code == 251: raise API_ERR_EMAIL_NO_PASSWORD(data)
-    elif api_code == 257: raise API_ERR_COMMUNITY_USER_CREATED_COMMUNITIES_VERIFY(data)
-    elif api_code == 262: raise ReachedMaxTitles(data)
-    elif api_code == 270: raise VerificationRequired(data)
-    elif api_code == 271: raise API_ERR_INVALID_AUTH_NEW_DEVICE_LINK(data)
-    elif api_code == 291: raise CommandCooldown(data)
-    elif api_code == 293: raise UserBannedByTeamAmino(data)
-    elif api_code == 300: raise BadImage(data)
-    elif api_code == 313: raise InvalidThemepack(data)
-    elif api_code == 314: raise InvalidVoiceNote(data)
-    elif api_code in [500, 700, 1600]: raise RequestedNoLongerExists(data)
-    elif api_code == 503: raise PageRepostedTooRecently(data)
-    elif api_code == 551: raise InsufficientLevel(data)
-    elif api_code == 702: raise WallCommentingDisabled(data)
-    elif api_code == 801: raise CommunityNoLongerExists(data)
-    elif api_code == 802: raise InvalidCodeOrLink(data)
-    elif api_code == 805: raise CommunityNameAlreadyTaken(data)
-    elif api_code == 806: raise CommunityCreateLimitReached(data)
-    elif api_code == 814: raise CommunityDisabled(data)
-    elif api_code == 833: raise CommunityDeleted(data)
-    elif api_code == 1501: raise DuplicatePollOption(data)
-    elif api_code == 1507: raise ReachedMaxPollOptions(data)
-    elif api_code == 1602: raise TooManyChats(data)
-    elif api_code == 1605: raise ChatFull(data)
-    elif api_code == 1606: raise TooManyInviteUsers(data)
-    elif api_code == 1611: raise ChatInvitesDisabled(data)
-    elif api_code == 1612: raise RemovedFromChat(data)
-    elif api_code == 1613: raise UserNotJoined(data)
-    elif api_code == 1627: raise API_ERR_CHAT_VVCHAT_NO_MORE_REPUTATIONS(data)
-    elif api_code == 1637: raise MemberKickedByOrganizer(data)
-    elif api_code == 1661: raise LevelFiveRequiredToEnableProps(data)
-    elif api_code == 1663: raise ChatViewOnly(data)
-    elif api_code == 1664: raise ChatMessageTooBig(data)
-    elif api_code == 1900: raise InviteCodeNotFound(data)
-    elif api_code == 2001: raise AlreadyRequestedJoinCommunity(data)
-    elif api_code == 2501: raise API_ERR_PUSH_SERVER_LIMITATION_APART(data)
-    elif api_code == 2502: raise API_ERR_PUSH_SERVER_LIMITATION_COUNT(data)
-    elif api_code == 2503: raise API_ERR_PUSH_SERVER_LINK_NOT_IN_COMMUNITY(data)
-    elif api_code == 2504: raise API_ERR_PUSH_SERVER_LIMITATION_TIME(data)
-    elif api_code == 2601: raise AlreadyCheckedIn(data)
-    elif api_code == 2611: raise AlreadyUsedMonthlyRepair(data)
-    elif api_code == 2800: raise AccountAlreadyRestored(data)
-    elif api_code == 3102: raise IncorrectVerificationCode(data)
-    elif api_code == 3905: raise NotOwnerOfChatBubble(data)
-    elif api_code == 4300: raise NotEnoughCoins(data)
-    elif api_code == 4400: raise AlreadyPlayedLottery(data)
-    elif api_code in [4500, 4501]: raise CannotSendCoins(data)
-    elif api_code == 4805: raise FailedSubscribeFanClub(data)
-    elif api_code == 6001: raise AminoIDAlreadyChanged(data)
-    elif api_code == 6002: raise InvalidAminoID(data)
-    elif api_code == 9901: raise InvalidName(data)
-    else: raise UnknownError(data)
+    if api_code == 100:
+        raise UnsupportedService(data)
+    elif api_code == 102:
+        raise FileTooLarge(data)
+    elif api_code in [103, 104]:
+        raise InvalidRequest(data)
+    elif api_code == 105:
+        raise InvalidSession(data)
+    elif api_code == 106:
+        raise AccessDenied(data)
+    elif api_code == 107:
+        raise UnexistentData(data)
+    elif api_code == 110:
+        raise ActionNotAllowed(data)
+    elif api_code == 111:
+        raise ServiceUnderMaintenance(data)
+    elif api_code == 113:
+        raise MessageNeeded(data)
+    elif api_code == 200:
+        raise InvalidAccountOrPassword(data)
+    elif api_code == 201:
+        raise AccountDisabled(data)
+    elif api_code == 213:
+        raise InvalidEmail(data)
+    elif api_code == 214:
+        raise InvalidPassword(data)
+    elif api_code == 215:
+        raise EmailAlreadyTaken(data) and UnsupportedEmail(data)
+    elif api_code == 216:
+        raise AccountDoesntExist(data)
+    elif api_code == 218:
+        raise InvalidDevice(data)
+    elif api_code == 219:
+        raise AccountLimitReached(data) or TooManyRequests(data)
+    elif api_code == 221:
+        raise CantFollowYourself(data)
+    elif api_code == 225:
+        raise UserUnavailable(data)
+    elif api_code == 229:
+        raise YouAreBanned(data)
+    elif api_code == 230:
+        raise UserNotMemberOfCommunity(data)
+    elif api_code == 235:
+        raise RequestRejected(data)
+    elif api_code == 238:
+        raise ActivateAccount(data)
+    elif api_code == 239:
+        raise CantLeaveCommunity(data)
+    elif api_code == 240:
+        raise ReachedTitleLength(data)
+    elif api_code == 245:
+        raise UserHasBeenDeleted(data)
+    elif api_code == 246:
+        raise AccountDeleted(data)
+    elif api_code == 251:
+        raise API_ERR_EMAIL_NO_PASSWORD(data)
+    elif api_code == 257:
+        raise API_ERR_COMMUNITY_USER_CREATED_COMMUNITIES_VERIFY(data)
+    elif api_code == 262:
+        raise ReachedMaxTitles(data)
+    elif api_code == 270:
+        raise VerificationRequired(data)
+    elif api_code == 271:
+        raise API_ERR_INVALID_AUTH_NEW_DEVICE_LINK(data)
+    elif api_code == 291:
+        raise CommandCooldown(data)
+    elif api_code == 293:
+        raise UserBannedByTeamAmino(data)
+    elif api_code == 300:
+        raise BadImage(data)
+    elif api_code == 313:
+        raise InvalidThemepack(data)
+    elif api_code == 314:
+        raise InvalidVoiceNote(data)
+    elif api_code in [500, 700, 1600]:
+        raise RequestedNoLongerExists(data)
+    elif api_code == 503:
+        raise PageRepostedTooRecently(data)
+    elif api_code == 551:
+        raise InsufficientLevel(data)
+    elif api_code == 702:
+        raise WallCommentingDisabled(data)
+    elif api_code == 801:
+        raise CommunityNoLongerExists(data)
+    elif api_code == 802:
+        raise InvalidCodeOrLink(data)
+    elif api_code == 805:
+        raise CommunityNameAlreadyTaken(data)
+    elif api_code == 806:
+        raise CommunityCreateLimitReached(data)
+    elif api_code == 814:
+        raise CommunityDisabled(data)
+    elif api_code == 833:
+        raise CommunityDeleted(data)
+    elif api_code == 1501:
+        raise DuplicatePollOption(data)
+    elif api_code == 1507:
+        raise ReachedMaxPollOptions(data)
+    elif api_code == 1602:
+        raise TooManyChats(data)
+    elif api_code == 1605:
+        raise ChatFull(data)
+    elif api_code == 1606:
+        raise TooManyInviteUsers(data)
+    elif api_code == 1611:
+        raise ChatInvitesDisabled(data)
+    elif api_code == 1612:
+        raise RemovedFromChat(data)
+    elif api_code == 1613:
+        raise UserNotJoined(data)
+    elif api_code == 1627:
+        raise API_ERR_CHAT_VVCHAT_NO_MORE_REPUTATIONS(data)
+    elif api_code == 1637:
+        raise MemberKickedByOrganizer(data)
+    elif api_code == 1661:
+        raise LevelFiveRequiredToEnableProps(data)
+    elif api_code == 1663:
+        raise ChatViewOnly(data)
+    elif api_code == 1664:
+        raise ChatMessageTooBig(data)
+    elif api_code == 1900:
+        raise InviteCodeNotFound(data)
+    elif api_code == 2001:
+        raise AlreadyRequestedJoinCommunity(data)
+    elif api_code == 2501:
+        raise API_ERR_PUSH_SERVER_LIMITATION_APART(data)
+    elif api_code == 2502:
+        raise API_ERR_PUSH_SERVER_LIMITATION_COUNT(data)
+    elif api_code == 2503:
+        raise API_ERR_PUSH_SERVER_LINK_NOT_IN_COMMUNITY(data)
+    elif api_code == 2504:
+        raise API_ERR_PUSH_SERVER_LIMITATION_TIME(data)
+    elif api_code == 2601:
+        raise AlreadyCheckedIn(data)
+    elif api_code == 2611:
+        raise AlreadyUsedMonthlyRepair(data)
+    elif api_code == 2800:
+        raise AccountAlreadyRestored(data)
+    elif api_code == 3102:
+        raise IncorrectVerificationCode(data)
+    elif api_code == 3905:
+        raise NotOwnerOfChatBubble(data)
+    elif api_code == 4300:
+        raise NotEnoughCoins(data)
+    elif api_code == 4400:
+        raise AlreadyPlayedLottery(data)
+    elif api_code in [4500, 4501]:
+        raise CannotSendCoins(data)
+    elif api_code == 4805:
+        raise FailedSubscribeFanClub(data)
+    elif api_code == 6001:
+        raise AminoIDAlreadyChanged(data)
+    elif api_code == 6002:
+        raise InvalidAminoID(data)
+    elif api_code == 9901:
+        raise InvalidName(data)
+    else:
+        raise UnknownError(data)

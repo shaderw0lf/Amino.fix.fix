@@ -1,6 +1,9 @@
 # LEAVE DS STORE ALONE
 .DS_Store
 
+# Ruff cache
+.ruff*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
