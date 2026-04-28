@@ -60,6 +60,7 @@ class SubClient(Client):
             own_timeout=mainClient.timeout_settings,
             socket_enabled=False,
             api_library=mainClient.api_library or objects.APILibraries.HTTPX,
+            api_url=mainClient.api,
         )
         self.vc_connect: bool = False
         self.sid: str = mainClient.sid
