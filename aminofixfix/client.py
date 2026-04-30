@@ -1025,8 +1025,12 @@ class Client(Callbacks, SocketHandler):
             t = "audio/aac"
         elif fileType == "image":
             t = "image/jpg"
+        elif fileType == "transparent-image":
+            t = "image/png"
         elif fileType == "gif":
             t = "image/gif"
+        elif fileType == "theme":
+            t = "application/zip"
         else:
             raise exceptions.SpecifyType(fileType)
 
