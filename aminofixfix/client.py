@@ -1021,6 +1021,7 @@ class Client(Callbacks, SocketHandler):
 
             - **Fail** : :meth:`Exceptions <aminofixfix.lib.exceptions>`
         """
+        target = ""
         if fileType == "audio":
             t = "audio/aac"
         elif fileType == "image":
@@ -1031,13 +1032,14 @@ class Client(Callbacks, SocketHandler):
             t = "image/gif"
         elif fileType == "theme":
             t = "application/zip"
+            target = "/target/theme"
         else:
             raise exceptions.SpecifyType(fileType)
 
         data = file.read()
 
         response = self.session.post(
-            "/g/s/media/upload",
+            "/g/s/media/upload" + target,
             data=data,
             headers=self.additional_headers(content_type=t, data=data),
         )
