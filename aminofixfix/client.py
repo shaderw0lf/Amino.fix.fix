@@ -1009,7 +1009,7 @@ class Client(Callbacks, SocketHandler):
         else:
             return objects.UserProfile(response.json()["account"]).UserProfile
 
-    def upload_media(self, file: BinaryIO, fileType: str):
+    def upload_media(self, file: BinaryIO, fileType: str, ndcId: int = 0):
         """
         Upload file to the amino servers.
 
@@ -1037,6 +1037,8 @@ class Client(Callbacks, SocketHandler):
             raise exceptions.SpecifyType(fileType)
 
         data = file.read()
+
+        where = "g" if ndcId == 0 else f"x{ndcId}"
 
         response = self.session.post(
             "/g/s/media/upload" + target,
